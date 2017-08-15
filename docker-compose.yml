@@ -1,0 +1,16 @@
+version: '2'
+services:
+  selgrid:
+    image: wernight/phantomjs:2
+    command: phantomjs --webdriver=8910
+    ports:
+      - "8910:8910"
+
+  tests:
+    build: .
+    #command: Ruby runner.rb
+    links:
+      - selgrid
+    volumes:
+      - .:/app
+    

@@ -1,0 +1,11 @@
+#ruby=ruby-2.4.1
+#ruby-gemset=webspec
+# These lines allow gem auto-setting with RVM
+
+source 'https://rubygems.org'
+# Testing Framework
+gem 'rspec', '~> 3.6'
+
+# Web driver
+#gem 'phantomjs-binaries', '~> 2.1' # good for headless running
+gem 'selenium-webdriver', '~> 3.0.3' # browser local/remote testing
