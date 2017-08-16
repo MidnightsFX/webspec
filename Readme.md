@@ -32,4 +32,8 @@ Due to this page not directly supporting mobile and mobile users ideally being d
 
 ### Regression Tests ###
 * Browser Compatability Tests - These test how functional the website is within a wide variety of browsers.
-* 
+* Testing external dependencies - Dependencies which need to interface with this project need to have their interfaces tested.
+* Backend Service Tests - While the interface to this system is important it relies heavily on a backend service which is not very visible but should be tested seperately and together with the visual interface each release.
+
+
+## Running Test Containers ##
