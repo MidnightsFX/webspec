@@ -37,3 +37,31 @@ Due to this page not directly supporting mobile and mobile users ideally being d
 
 
 ## Running Test Containers ##
+
+Requirements:
+* [Docker](https://docs.docker.com/engine/installation/)
+* [Docker-Compose](https://docs.docker.com/compose/install/)
+* build machine will require internet access for containers and tests
+
+The following commands will need to be run from the project directory root, where the docker-compose & dockerfiles are located.
+Commands to run:
+
+`docker-compose build`
+
+`docker-compose run tests`
+
+To Run locally:
+
+Install gemset, ideally using autorvm settings.
+
+`bundle install`
+
+Download [PhantomJS](http://phantomjs.org/download.html) and run it.
+
+You will need to run PhantomJS locally once it is installed, and change the target URI in setup_helper to your localhost:port, where PhantomJS is running.
+
+You can then either run the runner file from rootfs or run spec:
+
+`Ruby runner.rb`
+
+`rspec -f d`
