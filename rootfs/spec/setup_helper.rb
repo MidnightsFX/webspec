@@ -10,5 +10,4 @@ def setup
   @driver.manage.timeouts.implicit_wait = 10 # seconds
   @driver.manage.window.resize_to(1920, 1080)
   # makes it so that things are considered 'visible'
-  #@driver.browser.set_window_size(1440, 900)
 end

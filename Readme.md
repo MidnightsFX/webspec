@@ -21,6 +21,15 @@ Due to this page not directly supporting mobile and mobile users ideally being d
 
 ## Test Structure ##
 
+* Functional - Feature specific tests to validate functionality, included in the regression tests minimally, but runnable independantly.
+* Regression - Collection of tests that would be used to assure release stability, validates that functional changes have not impacted other areas.
 
+### Functional Tests ###
+* Links - Connections to external dependencies, validates requests to resources still work and resources exist
+* Menus - Tests of the numerous overlay menus that provide navigation and functionality
+* Panels - Tests for the main view operational sections (panels), booking flights etc.
+* Others - Independant tests to specific pieces of functionality, if these tests grow they should get their own catagories.
 
-
+### Regression Tests ###
+* Browser Compatability Tests - These test how functional the website is within a wide variety of browsers.
+* 

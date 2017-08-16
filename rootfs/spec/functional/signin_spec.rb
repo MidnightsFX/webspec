@@ -25,13 +25,12 @@ RSpec.describe 'Sign-in overlay', login: true do # tagged as login
       popupid = loginlink.attribute('aria-describedby')
       expect(@driver.find_element(:id, popupid).displayed?).to be true
     end
-    # negative test-case
-    it 'overlay is not visible by default' do
+    it 'overlay is not visible by default' do # negative test-case
       # This should error out, as no element with this ID exists
       # qtip-1 is the first panel created, ie- this verifies no panels exist yet
       expect { @driver.find_element(:id, 'qtip-1') }.to raise_error
     end
-  end # end context login
+  end # end context for login overlay
 
   context 'signup' do # signup hyperlink
     it 'validate redirection' do
@@ -43,7 +42,7 @@ RSpec.describe 'Sign-in overlay', login: true do # tagged as login
       @driver.find_element(:link, 'Join now').click
       expect(@driver.current_url.to_s).to eql('https://www.united.com/ual/en/us/account/enroll/default')
     end
-  end # end context signup
+  end # end context for signup
 
   context 'signin' do # login
     it 'redirects to login page', logn: true do
@@ -58,5 +57,5 @@ RSpec.describe 'Sign-in overlay', login: true do # tagged as login
       sleep 3 # whatever is hosting the login page is way slower
       expect(@driver.current_url.to_s).to eql('https://www.united.com/ual/en/us/account/account/signin')
     end
-  end # end context login
-end # end sign-in describe
+  end # end context for login
+end # end describe
